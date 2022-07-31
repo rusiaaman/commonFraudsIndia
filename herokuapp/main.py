@@ -11,6 +11,7 @@ from git import Repo
 GITHUBDEPLOY = os.environ['GITHUBDEPLOY']
 app = FastAPI()
 
+
 class Form(BaseModel):
     title: str
     initiate: str
@@ -28,6 +29,9 @@ def process(form: Form):
     folder = os.path.join(tmpdir, "commonFraudsIndia")
     cmtname = "Created by bot using google form: " + form.title
     repo = Repo.clone_from(f"https://rusiaaman:{GITHUBDEPLOY}@github.com/rusiaaman/commonFraudsIndia.git", folder)
+    repo.config_writer().set_value("user", "name", "Aman Rusia").release()
+    repo.config_writer().set_value("user", "email", "rusia.aman@gmail.com").release()
+
     new_branch = str(uuid4())
     current = repo.create_head(new_branch)
     current.checkout()
