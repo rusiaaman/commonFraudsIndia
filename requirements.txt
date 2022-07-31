@@ -1,0 +1,4 @@
+GitPython
+gunicorn
+fastapi
+uvicorn[standard]

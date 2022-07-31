@@ -1,0 +1,1 @@
+web: gunicorn heroku.main:app --workers 12 --worker-class uvicorn.workers.UvicornWorker
