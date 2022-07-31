@@ -38,8 +38,11 @@ def _create_file(form: Form, filepath: Path, readmepath: Path):
 {form.bestpractices}
         """)
 
-    with readmepath.open("a") as f:
-        f.write(f"\n- [{form.title}](</list/{form.title}>)")
+    with readmepath.open("r") as f:
+        data = f.read()
+    with readmepath.open("w") as f:
+        data = data.rstrip("\n")
+        f.write(data + f"\n- [{form.title}](</list/{form.title}>)")
 
 def process(form: Form):
     with tempfile.TemporaryDirectory() as tmpdir:
