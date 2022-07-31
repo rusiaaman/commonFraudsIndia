@@ -16,12 +16,27 @@ class Form(BaseModel):
     title: str
     initiate: str
     process: str
+    mechanism: str
     bestpractices: str
 
 def _create_file(form: Form, filepath: Path):
     print(filepath.absolute())
     with filepath.open('w') as f:
-        f.write("test")
+        f.write(f"""
+# {form.title}
+
+## Initiation
+{form.initiate}
+
+## Process
+{form.process}
+
+## Mechanism
+{form.mechanism}
+
+## Best practices to prevent the fraud
+{form.bestpractices}
+        """)
 
 def process(form: Form):
     tmpdir = "test"
