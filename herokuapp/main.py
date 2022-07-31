@@ -19,7 +19,7 @@ class Form(BaseModel):
     mechanism: str
     bestpractices: str
 
-def _create_file(form: Form, filepath: Path):
+def _create_file(form: Form, filepath: Path, readmepath: Path):
     print(filepath.absolute())
     with filepath.open('w') as f:
         f.write(f"""
@@ -38,6 +38,9 @@ def _create_file(form: Form, filepath: Path):
 {form.bestpractices}
         """)
 
+    with readmepath.open("a") as f:
+        f.write(f"\n- ({form.title})[/list/{form.title}]")
+
 def process(form: Form):
     with tempfile.TemporaryDirectory() as tmpdir:
         folder = os.path.join(tmpdir, "commonFraudsIndia")
@@ -53,7 +56,8 @@ def process(form: Form):
         repo.git.pull('origin', master)
 
         new_file = Path(folder) / "list" / form.title 
-        _create_file(form, new_file)
+        readme_path = Path(folder) / "README.md"
+        _create_file(form, new_file, readme_path)
 
         repo.git.add(A=True)
         repo.git.commit(m=cmtname)
