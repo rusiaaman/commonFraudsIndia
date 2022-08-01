@@ -58,7 +58,7 @@ def process(form: Form):
         master = repo.heads.master
         repo.git.pull('origin', master)
 
-        new_file = Path(folder) / "list" / form.title 
+        new_file = Path(folder) / "list" / (form.title + ".md") 
         readme_path = Path(folder) / "README.md"
         _create_file(form, new_file, readme_path)
 
