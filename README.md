@@ -5,3 +5,4 @@ List of common frauds in india
 - [ Nude videocall blackmail ](/list/Nude-videocall-blackmail.md)
 - [ Fraud NGO asking money ](</list/Fraud NGO asking money>)
 - [Google search fraud website on top](</list/Google search fraud website on top>)
+- [Impersonating as an Army man to do multiple types of fraud](</list/Impersonating as an Army man to do multiple types of fraud>)
