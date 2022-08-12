@@ -6,4 +6,4 @@ List of common frauds in india
 - [ Fraud NGO asking money ](</list/Fraud NGO asking money>)
 - [Google search fraud website on top](</list/Google search fraud website on top>)
 - [Impersonating as an Army man to do multiple types of fraud](</list/Impersonating as an Army man to do multiple types of fraud.md>)
-- [Google map business impersonation](</list/Google map business impersonation>)
+- [Google map business impersonation](</list/Google map business impersonation.md>)
