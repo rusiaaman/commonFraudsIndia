@@ -10,3 +10,4 @@ List of common frauds in india
 - [Fake job interview](</list/Fake-job-interview.md>)
 - [Fake job](</list/Fake-job-offer.md>)
 - [Import fees on a parcel](</list/import-fees-due.md>) 
+- [Customer service on twitter](</list/customer-service-on-twitter.md>)
