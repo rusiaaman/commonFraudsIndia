@@ -9,3 +9,4 @@ List of common frauds in india
 - [Google map business impersonation](</list/Google map business impersonation.md>)
 - [Fake job interview](</list/Fake-job-interview.md>)
 - [Fake job](</list/Fake-job-offer.md>)
+- [Import fees on a parcel](</list/import-fees-due.md>) 
